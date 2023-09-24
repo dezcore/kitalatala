@@ -1,9 +1,17 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+import Link from "next/link";
+import Image from "next/image";
+import styles from "./page.module.css";
+
+export const metadata = {
+  title: "Kitalatala",
+};
 
 export default function Home() {
   return (
     <main className={styles.main}>
+      <div>
+        <Link href="/dashboard">Dashboard</Link>
+      </div>
       <div className={styles.description}>
         <p>
           Get started by editing&nbsp;
@@ -15,7 +23,7 @@ export default function Home() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            By{' '}
+            By{" "}
             <Image
               src="/vercel.svg"
               alt="Vercel Logo"
@@ -91,5 +99,5 @@ export default function Home() {
         </a>
       </div>
     </main>
-  )
+  );
 }
